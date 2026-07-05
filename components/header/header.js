@@ -1,5 +1,5 @@
 export async function loadHeader() {
-    const res = await fetch("/components/header/header.html");
+    const res = await fetch("components/header/header.html");
     const data = await res.text();
 
     document.getElementById("header").innerHTML = data;
