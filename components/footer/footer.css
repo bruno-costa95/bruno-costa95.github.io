@@ -1,0 +1,37 @@
+.footer {
+  background-color: var(--primary);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--lg);
+  width: 100vw;
+  height: fit-content;
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding-left: 20%;
+  }
+
+  .footer a {
+    transition: ease-in-out 0.2s;
+  }
+
+  .footer a:hover {
+    color: var(--background);
+    transition: ease-in-out 0.2s;
+  }
+}

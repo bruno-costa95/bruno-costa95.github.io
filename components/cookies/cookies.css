@@ -1,0 +1,42 @@
+.cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 16px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cookies-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cookies-actions button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.cookies-hidden {
+  display: none;
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .cookies-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cookies-banner p {
+    max-width: 70%;
+  }
+}

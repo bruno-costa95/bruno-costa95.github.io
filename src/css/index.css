@@ -1,0 +1,8 @@
+/* /////// BASE */
+@import url('./base/reset.css');
+/* @import url('./base/buttons.css'); */
+
+/* /////// COMPONENTS */
+@import url('/components/header/header.css');
+@import url('/components/footer/footer.css');
+@import url('/components/cookies/cookies.css');
