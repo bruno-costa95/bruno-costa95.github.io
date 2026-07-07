@@ -3,6 +3,8 @@
     color: var(--text);
 }
 
+/* HERO
+////////////////////// */
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -23,7 +25,6 @@
     border-radius: 100%;
     object-fit: cover;
     box-shadow: var(--shadow);
-    
     width: 100%;
 }
 
@@ -32,11 +33,58 @@
     font-size: var(--lg);
 }
 
+.section-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: var(--xl);
+    text-align: center;
+}
+
+/* PROJECTS
+////////////////////// */
+
+
+/* ABOUT 
+/////////////////////*/
+
+
+/* CONTACTS
+/////////////////////*/
+.contacts {
+    height: fit-content;
+}
+
+.contacts-links {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: var(--lg);
+    padding: var(--lg);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--md);
+    width: 30%;
+    height: 30%;
+    font-size: var(--md);
+}
+
+.contact-icon {
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
 @media (min-width: 1024px ) {
     .main {
         padding-left: 20%;
     }
 
+    /* HERO
+    ////////////////////// */
     .hero-content {
         display: grid;
         grid-template-areas: 
@@ -61,4 +109,15 @@
         grid-area: text;
         align-self: flex-start;
     }
+
+    /* PROJECTS
+    ////////////////////// */
+
+
+    /* ABOUT 
+    /////////////////////*/
+
+
+    /* CONTACTS
+    /////////////////////*/
 }

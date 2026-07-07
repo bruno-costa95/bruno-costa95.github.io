@@ -1,48 +1,58 @@
 export async function loadHeader() {
-    const res = await fetch("components/header/header.html");
-    const data = await res.text();
+    const headerContainer = document.getElementById("header");
+    
+    if (!headerContainer) return;
 
-    document.getElementById("header").innerHTML = data;
+    try {
+        const res = await fetch("components/header/header.html");
+        
+        if (!res.ok) throw new Error(`Failed to load header HTML: ${res.status}`);
+        
+        const data = await res.text();
+        headerContainer.innerHTML = data;
 
-    const toggleBtn = document.querySelector(".toggle-btn");
-    const nav = document.querySelector(".nav");
-    const navLinks = document.querySelectorAll(".nav-list a");
+        const toggleBtn = document.querySelector(".toggle-btn");
+        const toggleImg = document.querySelector(".toggle-img")
+        const nav = document.querySelector(".nav");
+        const navLinks = document.querySelectorAll(".nav-list a");
 
-    if (!toggleBtn || !nav) return;
+        if (!toggleBtn || !nav) return;
 
-    // ===== abrir / fechar menu =====
-    toggleBtn.addEventListener("click", () => {
-        toggleBtn.classList.toggle("active");
-        nav.classList.toggle("active");
+        // MENU
+        ///////////////////////////////
+        toggleBtn.addEventListener("click", () => {
+            
+            toggleBtn.classList.toggle("active");
+            toggleImg.classList.toggle("active")
+            nav.classList.toggle("active");
 
-        document.body.style.overflow =
-            nav.classList.contains("active") ? "hidden" : "auto";
-    });
-
-    // ===== clique nos links =====
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            // Remove a classe active de todos os links
-            navLinks.forEach(l => l.classList.remove("active"));
-
-            // Adiciona no link clicado
-            link.classList.add("active");
-
-            // Fecha o menu (mobile)
-            toggleBtn.classList.remove("active");
-            nav.classList.remove("active");
-            document.body.style.overflow = "auto";
+            document.body.style.overflow =
+                nav.classList.contains("active") ? "hidden" : "auto";
         });
-    });
 
-    // ===== definir active pela URL =====
-    const currentPath = window.location.pathname;
+        // LINK CLICK
+        /////////////////////////////// 
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
 
-    navLinks.forEach(link => {
-        const linkPath = link.getAttribute("href");
+                toggleBtn.classList.remove("active");
+                nav.classList.remove("active");
+                document.body.style.overflow = "auto";
+            });
+        });
 
-        if (currentPath.includes(linkPath)) {
-            link.classList.add("active");
-        }
-    });
+        const currentPath = window.location.pathname;
+
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute("href");
+            if (linkPath && linkPath !== "/" && currentPath.includes(linkPath)) {
+                link.classList.add("active");
+            }
+        });
+
+    } catch (error) {
+        console.error("Error loading the header component:", error);
+    }
 }

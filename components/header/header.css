@@ -25,6 +25,14 @@
   position: relative;
 }
 
+.toggle-img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.toggle-img.active {
+  transform: scaleX(-1);
+}
+
 .nav {
   background-color: var(--inner);
   color: var(--text);
@@ -107,12 +115,12 @@
 
   .header-title, .header-text {
     text-align: left;
-    padding: 0 var(--lg);
+    padding: 0 var(--md);
   }
 
   .nav-list {
     align-items: start;
-    padding: 0 var(--lg);
+    padding: 0 var(--md);
   }
 
   .nav-item {
