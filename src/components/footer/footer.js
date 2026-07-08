@@ -4,7 +4,7 @@ export async function loadFooter() {
     if (!footerContainer) return;
 
     try {
-        const res = await fetch("components/footer/footer.html");
+        const res = await fetch("/src/components/footer/footer.html");
 
         if (!res.ok) throw new Error(`Failed to load footer HTML: ${res.status}`);
 

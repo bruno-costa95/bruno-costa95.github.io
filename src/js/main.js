@@ -1,8 +1,8 @@
-import { initCookies } from "../../components/cookies/cookies.js";
-import { loadFooter } from "../../components/footer/footer.js";
-import { loadHeader } from "../../components/header/header.js";
+import { initCookies } from "/src/components/cookies/cookies.js";
+import { loadFooter } from "/src/components/footer/footer.js";
+import { loadHeader } from "/src/components/header/header.js";
 // import { initHome } from "../../pages/home/home.js";
-import { getPage } from "./utils.js";
+import { getPage } from "/src/js/utils/breakpoints.js";
 
 //Inicia os scripts
 document.addEventListener("DOMContentLoaded", () => {
