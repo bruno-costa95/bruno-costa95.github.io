@@ -1,17 +1,9 @@
-export async function loadFooter() {
-    const footerContainer = document.getElementById("footer");
+import footerHTML from "./footer.html?raw"
 
-    if (!footerContainer) return;
+export function loadFooter() {
+    const footerContainer = document.getElementById("footer")
 
-    try {
-        const res = await fetch("/src/components/footer/footer.html");
+    if (!footerContainer) return
 
-        if (!res.ok) throw new Error(`Failed to load footer HTML: ${res.status}`);
-
-        const data = await res.text();
-        footerContainer.innerHTML = data;
-
-    } catch (error) {
-        console.error("Error loading the footer component:", error);
-    }
+    footerContainer.innerHTML = footerHTML
 }

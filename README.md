@@ -34,38 +34,83 @@ A arquitetura do projeto segue o padrão de separação por contexto, facilitand
 
 ```bash
 project/
-|
-|--- components                # Componentes
-    |--- [component].html
-|--- pages/                    # Páginas secundárias
-|   |--- [page].html
-|--- src/                      # Código fonte
-    |--- assets/                    # Arquivos estáticos
-        |--- fonts/
-        |--- icons/
-        |--- etc/
-    |--- css/                   # Estilos
-        |--- base/                  # Estilos globais
-            |--- buttons.css
-            |--- reset.css
-        |--- components/            # Estilos isolados por componente
-            |--- buttons.css
-            |--- cookies.css
-            |--- footer.css
-            |--- header.css
-        |--- pages/                 # Estilos isolados por página
-            |--- page.css
-        |--- index.css              # Estilo mestre
-
-    |--- js/                   # Scripts
-        |--- base/                  # Scripts globais
-            |--- layout.js
-        |--- components/            # Scripts isolados por componente
-            |--- cookies.js
-            |--- menu.js
-        |--- pages/                 # Scripts isolados por página
-            |--- page.js       
-        |--- main.js                # Script mestre
-
-|--- index.html                # Página principal
-|--- readme.md                 # Documentação
+│
+├── public/                        # Arquivos públicos (copiados sem processamento)
+│   ├── favicon.ico
+│   ├── robots.txt
+│   └── images/
+│
+├── src/
+│   │
+│   ├── assets/                    # Arquivos processados pelo Vite
+│   │   ├── fonts/
+│   │   ├── icons/
+│   │   ├── images/
+│   │   └── logos/
+│   │
+│   ├── components/                # Componentes reutilizáveis
+│   │   │
+│   │   ├── header/
+│   │   │   ├── header.html
+│   │   │   ├── header.css
+│   │   │   └── header.js
+│   │   │
+│   │   ├── footer/
+│   │   │   ├── footer.html
+│   │   │   ├── footer.css
+│   │   │   └── footer.js
+│   │   │
+│   │   ├── cookies/
+│   │   │   ├── cookies.html
+│   │   │   ├── cookies.css
+│   │   │   └── cookies.js
+│   │   │
+│   │   └── whatsapp/
+│   │       ├── whatsapp.html
+│   │       ├── whatsapp.css
+│   │       └── whatsapp.js
+│   │
+│   ├── pages/                     # Scripts e estilos específicos de páginas
+│   │   │
+│   │   ├── home/
+│   │   │   ├── home.css
+│   │   │   └── home.js
+│   │   │
+│   │   ├── projects/
+│   │   │   ├── projects.css
+│   │   │   └── projects.js
+│   │   │
+│   │   └── contact/
+│   │       ├── contact.css
+│   │       └── contact.js
+│   │
+│   ├── css/
+│   │   │
+│   │   ├── base/
+│   │   │   ├── reset.css
+│   │   │   ├── variables.css
+│   │   │   ├── typography.css
+│   │   │   └── global.css
+│   │   │
+│   │   └── index.css             # Arquivo principal de estilos
+│   │
+│   ├── js/
+│   │   │
+│   │   ├── base/
+│   │   │   ├── layout.js
+│   │   │   ├── routes.js
+│   │   │   └── utils.js
+│   │   │
+│   │   └── main.js               # Ponto de entrada do Vite
+│   │
+│   └── pages-html/               # Páginas HTML secundárias (opcional)
+│       ├── projects.html
+│       ├── contact.html
+│       └── about.html
+│
+├── index.html                    # Página principal (obrigatório na raiz)
+├── vite.config.js                # Configuração do Vite
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
