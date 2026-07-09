@@ -1,0 +1,35 @@
+# Dependencias (Pastas geradas automaticamente)
+# /////////////////////////////////////////////
+node_modules/
+dist/
+build/
+
+# 2. Configurações de IDE (Arquivos locais do seu editor)
+# /////////////////////////////////////////////
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# 3. Segurança e Variáveis de Ambiemte (Dados sensíveis e senhas)
+# /////////////////////////////////////////////
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+
+# Sistema Operacional (Arquivos temporários do sistema)
+# /////////////////////////////////////////////
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Outros (Código legado / Testes temporários)
+# /////////////////////////////////////////////
+style_old.css
