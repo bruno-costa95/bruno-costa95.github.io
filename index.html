@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Configurações básicas de codificação e viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da página e SEO principal -->
+    <title>Bruno Costa | Desenvolvedor Full Stack</title>
+    <meta name="description" content="Portfólio profissional de Bruno Costa, Desenvolvedor Full Stack especializado em criar soluções web modernas, responsivas e escaláveis." />
+    <meta name="author" content="Bruno Costa" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bruno-costa95.github.io/" />
+    <meta property="og:title" content="Bruno Costa | Desenvolvedor Full Stack" />
+    <meta property="og:description" content="Desenvolvimento web com foco em performance, arquitetura limpa e experiência do usuário." />
+    <meta property="og:image" content="https://bruno-costa95.github.io/assets/images/pixel_art2.webp" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bruno Costa | Desenvolvedor Full Stack" />
+    <meta name="twitter:description" content="Desenvolvimento web com foco em performance e arquitetura limpa." />
+    <meta name="twitter:image" content="https://bruno-costa95.github.io/assets/images/pixel_art2.webp" />
+
+    <!-- Favicon SVG (Servido da pasta public/) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fontes Externas (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Estilos CSS-->
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/pages/home/home.css" />
+
+    <!-- Script -->
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+  <body>
+
+    <!-- Cabeçalho (Injetado via JS) -->
+    <header id="header"></header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main">
+
+      <!-- Seção Hero / Apresentação -->
+      <section id="hero" class="hero section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-frame">
+              <img
+                src="/assets/images/profile_suit.webp"
+                alt="Foto de perfil de Bruno Costa"
+                class="hero-img"
+              />  
+            </div>
+            <h1 class="hero-title">&lt; Olá, eu sou Bruno /&gt;</h1>
+            <p class="hero-text">Desenvolvendo experiências digitais funcionais e impactantes!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Projetos -->
+      <section id="projects" class="projects section">
+        <h2 class="projects-title">Projetos</h2>
+        <div id="projects-grid" class="projects-grid">
+          <p class="loading-text">Carregando projetos...</p>
+        </div>
+      </section>
+
+      <!-- Seção Sobre Mim -->
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="about-content">
+            <h2 class="about-title">Sobre Mim</h2>
+            <p class="about-text">
+              Olá! Sou estudante de Ciências da Computação e apaixonado por
+              tecnologia. Estou desenvolvendo experiência em projetos acadêmicos e
+              pessoais com foco em desenvolvimento Full Stack. Estou em constante
+              aprendizado. Busco uma oportunidade no mercado de tecnologia para
+              aprimorar e adquirir conhecimento prático.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Contatos -->
+      <section id="contacts" class="contacts section">
+        <div class="container">
+          <div class="contacts-content">
+            <h2 class="contacts-title">Contatos</h2>
+            <div class="contacts-links">
+              <a id="linkedin" class="contact" href="https://www.linkedin.com/in/bruno-costa-it/" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/icons/social/linkedin.svg" alt="Ícone do LinkedIn" class="contact-icon" />
+              </a>
+              <a id="github" class="contact" href="https://github.com/bruno-costa95" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/icons/social/github.svg" alt="Ícone do GitHub" class="contact-icon" />
+              </a>
+              <a id="whatsapp" class="contact" href="https://wa.me/5513996382384" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/icons/social/whatsapp.svg" alt="Ícone do WhatsApp" class="contact-icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="footer"></footer>
+
+    <!-- Modal/Banner de Cookies -->
+    <div id="cookies"></div>
+
+  </body>
+</html>
