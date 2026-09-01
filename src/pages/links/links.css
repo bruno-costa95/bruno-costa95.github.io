@@ -1,0 +1,113 @@
+body {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--inner);
+    height: 100vh;
+    min-height: 667px;
+    max-height: 932px;
+    min-width: 375px;
+    max-width: 480px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.background {
+    height: 200px;
+    width: 100%;
+}
+
+.background-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    margin-top: -75px;
+    display: flex;
+    justify-content: center;
+    width: 100%;    
+}
+
+.profile-img {
+    width: 150px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--md);
+    padding: var(--md);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: var(--lg);
+    margin: 0;
+}
+
+.title p {
+    font-size: var(--md);
+    margin: 0;
+}
+
+.contacts-links {
+    display: flex;
+    gap: var(--lg);
+}
+
+.contacts a img {
+    width: 50px;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--md);
+    padding: var(--md);
+    flex-grow: 1; 
+    overflow-y: auto; 
+    box-sizing: border-box;
+}
+
+.link {
+    background-color: var(--primary);
+    color: var(--text);
+    font-size: 1.25rem;
+    border-radius: 25px;
+    width: 90%;
+    padding: var(--sm) var(--md);
+    text-align: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}

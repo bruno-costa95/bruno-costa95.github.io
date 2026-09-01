@@ -12,7 +12,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        outro: resolve(__dirname, 'outro/index.html'),
+        links: resolve(__dirname, 'src/pages/links/links.html'),
       },
     },
   },
